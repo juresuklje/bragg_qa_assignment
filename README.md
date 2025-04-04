@@ -12,26 +12,29 @@ This repository demonstrates a structured approach to testing APIs and databases
 
 ```
 bragg_qa_assignment/
-├── node_modules/               # Dependencies (generated)
-├── tests/                      # All test files
-│   ├── e2e/                    # End-to-end tests
-│   │   └── assignment.test.ts  # Assignement e2e tests
-│   ├── helpers/                # Helper functions for tests
-│   │   ├── api.ts              # API fetching utilities
-│   │   ├── db.ts               # Database utilities
-│   │   └── endpoints.ts        # API endpoint definitions
-│   └── integration/            # Integration tests
-│       └── db.test.ts          # Database integration tests
-├── .env                        # Environment variables (create from .example.env)
-├── .example.env                # Example environment variables
-├── .gitignore                  # Git ignore file
-├── docker-compose.yml          # Docker Compose configuration
-├── init.sql                    # Database initialization script
-├── package-lock.json           # Dependency lock file
-├── package.json                # Project configuration
-├── README.md                   # Project documentation
-├── tsconfig.json               # TypeScript configuration
-└── vitest.config.ts            # Vitest configuration
+├── node_modules/                         # Dependencies (generated)
+├── tests/                                # All test files
+│   ├── e2e/                              # End-to-end tests
+│   │   └── assignment.test.ts            # Assignement e2e tests
+│   ├── helpers/                          # Helper functions for tests
+│   │   ├── api.ts                        # API fetching utilities
+│   │   ├── db.ts                         # Database utilities
+│   │   └── endpoints.ts                  # API endpoint definitions
+│   ├── integration/                      # Integration tests
+│   │   └── db.test.ts                    # Database integration tests
+|   └── test_cases/                       # Test cases for API and UI
+|       ├── test-cases-withdrawal-api.md  # Test cases for API withdrawal tests
+|       └── test-cases-withdrawal-ui.md   # Test cases for UI withdrawal tests
+├── .env                                  # Environment variables (create from .example.env)
+├── .example.env                          # Example environment variables
+├── .gitignore                            # Git ignore file
+├── docker-compose.yml                    # Docker Compose configuration
+├── init.sql                              # Database initialization script
+├── package-lock.json                     # Dependency lock file
+├── package.json                          # Project configuration
+├── README.md                             # Project documentation
+├── tsconfig.json                         # TypeScript configuration
+└── vitest.config.ts                      # Vitest configuration
 ```
 
 ## Setup
@@ -157,6 +160,23 @@ describe('My E2E Test', () => {
   });
 });
 ```
+
+### Test Cases
+
+#### 1. Title of the Test Case
+
+**Description:** Provide helpful information regarding the purpose and scope of this test case.
+
+**Precondition:** Describe any conditions that must be met for the test case to be successfully executed.
+
+**Steps:**
+1. Detail the first step needed to execute the test.
+2. Continue with subsequent steps required to complete the test.
+
+**Input:** Specify any particular input data required for this test case.
+
+**Expected Result:** Describe the expected outcome or behavior if the test case is successfully executed.
+
 
 ## Troubleshooting
 
