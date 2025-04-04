@@ -1,6 +1,11 @@
 # BRAGG QA Assignment
 
-This repository demonstrates a structured approach to testing APIs and databases using Vitest, with both integration and end-to-end (e2e) tests.
+This repository demonstrates a structured approach to testing APIs and databases using Vitest, with both integration and end-to-end (e2e) tests. It includes example test cases for both UI and API scenarios:
+
+- [UI Test Cases](./tests/test_cases/UI.md): Example test cases focused on user interface interactions and behaviors.
+- [API Test Cases](./tests/test_cases/API.md): Example test cases designed to validate API functionality and responses.
+
+Explore these test cases to understand how to effectively test different components of an application.
 
 ## Prerequisites
 
@@ -160,23 +165,6 @@ describe('My E2E Test', () => {
   });
 });
 ```
-
-### Test Cases
-
-#### 1. Title of the Test Case
-
-**Description:** Provide helpful information regarding the purpose and scope of this test case.
-
-**Precondition:** Describe any conditions that must be met for the test case to be successfully executed.
-
-**Steps:**
-1. Detail the first step needed to execute the test.
-2. Continue with subsequent steps required to complete the test.
-
-**Input:** Specify any particular input data required for this test case.
-
-**Expected Result:** Describe the expected outcome or behavior if the test case is successfully executed.
-
 
 ## Troubleshooting
 
