@@ -1,0 +1,30 @@
+{
+  "name": "bragg_qa_assignment",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test:integration": "vitest tests/integration",
+    "test:e2e": "vitest tests/e2e",
+    "test:all": "vitest tests/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juresuklje/bragg_qa_assignment"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/juresuklje/bragg_qa_assignment/issues"
+  },
+  "homepage": "https://github.com/juresuklje/bragg_qa_assignment#readme",
+  "dependencies": {
+    "@types/node": "^22.14.0",
+    "@types/pg": "^8.11.11",
+    "dotenv": "^16.4.7",
+    "pg": "^8.14.1",
+    "typescript": "^5.8.2",
+    "vitest": "^3.1.1"
+  }
+}
