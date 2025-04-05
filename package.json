@@ -6,7 +6,8 @@
   "scripts": {
     "test:integration": "vitest tests/integration",
     "test:e2e": "vitest tests/e2e",
-    "test:all": "vitest tests/"
+    "test:all": "vitest tests/",
+    "lint": "eslint ."
   },
   "repository": {
     "type": "git",
@@ -26,5 +27,12 @@
     "pg": "^8.14.1",
     "typescript": "^5.8.2",
     "vitest": "^3.1.1"
+  },
+  "type": "module",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^8.29.0",
+    "@typescript-eslint/parser": "^8.29.0",
+    "eslint": "^9.24.0",
+    "eslint-plugin-react": "^7.37.5"
   }
 }

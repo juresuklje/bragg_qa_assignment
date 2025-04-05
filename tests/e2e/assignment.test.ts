@@ -1,5 +1,5 @@
-import { fetchAPI } from "../helpers/api";
-import { endpoints } from "../helpers/endpoints";
+import { fetchAPI } from '../helpers/api';
+import { endpoints } from '../helpers/endpoints';
 
 describe('Withdrawal API Tests', () => {
 
@@ -69,6 +69,7 @@ describe('Withdrawal API Tests', () => {
     it('should return an error for non-numeric amount', async () => {
       const withdrawal = {
         user_id: '6a9cf2ba-b394-4c1a-8a38-2edff793f1af',
+        // eslint-disable-next-line quotes
         amount: "abc",
       };
 
