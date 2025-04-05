@@ -105,14 +105,23 @@
 
 **Expected Result:** The withdrawal request is processed successfully (if decimals are allowed), or an error message is displayed (if only whole numbers are allowed).
 
-### 11. Edge Cases
+### 11. Withdrawal with leading/trailing Spaces
 
-**Description:** Test the minimum and maximum allowed withdrawal amounts, special characters, and consecutive requests.
+**Descriptio:** Test the behavior when the input contains leading or trailing spaces.
 
 **Steps:**
-- Test the minimum and maximum allowed withdrawal amounts.
-- Test input with special characters to ensure they are handled correctly.
-- Test making multiple withdrawal requests in quick succession to check for any race conditions or server load issues.
+1. Enter an amount with leading spaces (e.g., " 100") or trailing spaces (e.g., "100 ").
+2. Click the "Request Withdrawal" button.
 
-**Expected Result:** The system handles edge cases gracefully, providing appropriate error messages or processing requests as expected.
+**Expected results:** The spaces are trimmed, and the withdrawal request is processed successfully, or an error message is displayed if spaces are not allowed.
 
+
+### 12. Edge cases / other possible test cases:
+
+- **Minimum and Maximum Boundaries:** Test the minimum and maximum allowed withdrawal amounts.
+- **Special Characters:** Test input with special characters to ensure they are handled correctly. Additionally, check for decimal behaviour - how it handles . or ,. 
+- **Consecutive/Concurrent Requests:** Test making multiple withdrawal requests in quick succession to check for any race conditions or server load issues. Or make many concurrent requests.
+- **Session Timeout:** Test the behavior when the user's session times out during the withdrawal process.
+- **Network Latency:** Test the system's behavior under high network latency conditions.
+- **Browser Compatibility:** Test the withdrawal form across different web browsers and devices.
+- **Accessibility:** Ensure the withdrawal form is accessible to users with disabilities.
