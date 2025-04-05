@@ -17,6 +17,8 @@ Explore these test cases to understand how to effectively test different compone
 
 ```
 bragg_qa_assignment/
+├── .github/workflows                     # Dependencies (generated)
+|   └── pr_workflow.yml                   # GitHub actions workflows
 ├── node_modules/                         # Dependencies (generated)
 ├── tests/                                # All test files
 │   ├── e2e/                              # End-to-end tests
