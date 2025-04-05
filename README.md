@@ -9,7 +9,7 @@ Explore these test cases to understand how to effectively test different compone
 
 ## Prerequisites
 
-- [Node.js](https://nodejs.org/) (v16 or higher)
+- [Node.js](https://nodejs.org/) (v20 or higher)
 - [Docker](https://www.docker.com/) and Docker Compose
 - [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
 
@@ -39,7 +39,8 @@ bragg_qa_assignment/
 ├── package.json                          # Project configuration
 ├── README.md                             # Project documentation
 ├── tsconfig.json                         # TypeScript configuration
-└── vitest.config.ts                      # Vitest configuration
+├── vitest.config.ts                      # Vitest configuration
+└── eslint.config.js                      # Esling configuration
 ```
 
 ## Setup
@@ -171,3 +172,54 @@ describe('My E2E Test', () => {
 - **Database Connection Issues**: Make sure Docker is running and the container is up with `docker compose ps`
 - **Test Failures**: Check that your `.env` file contains the correct API URL
 - **Database Reset**: To reset the database, run `docker compose down -v` and then `docker compose up -d`
+
+
+## GitHub Actions Workflows
+
+This repository uses GitHub Actions to automate the process of linting and testing code. The workflows are designed to ensure code quality and consistency by running checks on pull requests and pushes to the `main` branch.
+
+### CI Workflow
+
+The CI workflow is triggered on pull requests and pushes to the `main` branch. It includes two main jobs:
+
+1. **Lint**:
+   - **Purpose**: Ensures code adheres to the defined coding standards.
+   - **Steps**:
+     - Checks out the code.
+     - Sets up Node.js.
+     - Installs dependencies.
+     - Runs ESLint to check for linting errors.
+
+2. **Test**:
+   - **Purpose**: Validates the functionality of the code through automated tests.
+   - **Steps**:
+     - Checks out the code.
+     - Sets up Node.js.
+     - Installs dependencies.
+     - Runs end-to-end (e2e) API tests.
+     - Runs integration tests for database interactions.
+
+### Prerequisites
+
+- Ensure you have Node.js (v20 or higher) installed.
+- Ensure Docker is installed and running if your tests require a database.
+
+
+## ESLint Setup
+
+This project uses ESLint to ensure code quality and consistency. ESLint is configured to work with JavaScript, TypeScript, and React.
+
+### Configuration
+
+The ESLint configuration is defined in `eslint.config.js`, which uses the flat config system introduced in ESLint v9. This configuration includes:
+
+- **Language Options**: Configured to support modern JavaScript features, including ES2021 and JSX.
+- **Plugins**: Utilizes `eslint-plugin-react` for React-specific linting rules and `@typescript-eslint/eslint-plugin` for TypeScript support.
+- **Rules**: Custom rules are defined to enforce coding standards, such as using single quotes for strings and requiring semicolons.
+
+### Running ESLint
+
+To check your code for linting errors, run the following command:
+
+```bash
+npm run lint
